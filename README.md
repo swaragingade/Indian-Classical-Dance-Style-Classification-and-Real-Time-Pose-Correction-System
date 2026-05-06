@@ -1,4 +1,4 @@
-# 💃 NrityaAI — Indian Classical Dance Style Classification & Real-Time Pose Correction
+# 💃 Indian Classical Dance Style Classification & Real-Time Pose Correction
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-FF6F00?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/)
