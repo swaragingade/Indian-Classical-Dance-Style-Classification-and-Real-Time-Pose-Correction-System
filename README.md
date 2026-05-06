@@ -1,4 +1,4 @@
-# 💃 Indian Classical Dance Style Classification & Real-Time Pose Correction
+# Indian Classical Dance Style Classification & Real-Time Pose Correction
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-FF6F00?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/)
@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 
 - [Overview](#-overview)
 - [Key Results](#-key-results)
@@ -28,7 +28,7 @@
 
 ---
 
-## 🔍 Overview
+## Overview
 
 Indian classical dance forms like **Bharatanatyam**, **Kathak**, and **Odissi** demand precise postural discipline historically taught through in-person instruction. NrityaAI bridges this gap using AI — delivering real-time style classification and personalized corrective feedback through a standard 2D webcam.
 
@@ -36,7 +36,7 @@ The system uses **MediaPipe BlazePose** to extract 33 skeletal landmarks per fra
 
 ---
 
-## 🏆 Key Results
+## Key Results
 
 | Metric | Value |
 |--------|-------|
@@ -49,7 +49,7 @@ The system uses **MediaPipe BlazePose** to extract 33 skeletal landmarks per fra
 
 ---
 
-## ✨ Features
+## Features
 
 - 💃 **Dance Style Classification** — Real-time prediction of Bharatanatyam, Kathak, or Odissi with class-probability distribution
 - 🦴 **Pose Keypoint Extraction** — 33 anatomical landmarks extracted per frame using MediaPipe BlazePose
@@ -60,7 +60,7 @@ The system uses **MediaPipe BlazePose** to extract 33 skeletal landmarks per fra
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 User (Webcam / Video Upload)
@@ -82,7 +82,7 @@ JSON Response → Display Results (UI)
 
 ---
 
-## 🛠️ Tools & Libraries
+## Tools & Libraries
 
 | Tool / Library | Purpose | Link |
 |----------------|---------|------|
@@ -99,7 +99,7 @@ JSON Response → Display Results (UI)
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -132,7 +132,7 @@ Then open your browser at `http://localhost:8501` 🎉
 
 ---
 
-## 📋 Project Workflow
+## Project Workflow
 
 ### Step 1 — Video Acquisition & Keypoint Extraction
 Dance videos are sub-sampled at **10 FPS** and each frame is passed through **MediaPipe BlazePose** to extract 33 skeletal landmarks `(x, y, z, visibility)` per frame.
@@ -159,7 +159,7 @@ REST API serves predictions; Streamlit frontend delivers real-time style classif
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 | Style | Raw Windows | After Oversampling |
 |-------|------------|-------------------|
@@ -173,7 +173,7 @@ REST API serves predictions; Streamlit frontend delivers real-time style classif
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 ```
 Input: (60 frames × 33 landmarks × 4 channels)
@@ -193,7 +193,7 @@ Dropout (0.3)
 
 ---
 
-## 🎯 Pose Correction Module
+## Pose Correction Module
 
 The system maintains a **24-pose reference database** across 3 styles:
 
@@ -207,7 +207,7 @@ At inference, joint angles are compared against the reference. Any joint exceedi
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nrityaai/
@@ -232,7 +232,7 @@ nrityaai/
 └── README.md                 # Project documentation
 ```
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This project is developed for **educational and cultural preservation purposes**. Dance videos used for training were sourced from publicly available recordings. All rights to the original performances belong to their respective artists.
 
